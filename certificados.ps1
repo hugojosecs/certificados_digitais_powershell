@@ -4,8 +4,8 @@ net use B: /delete
 #Coloque abaixo o diretorio onde estão os certificados
 net use B: "\\SERVIDOR\CERTIFICADO DIGITAL A1"
 #abaixo, aqui na empresa tinha pastas variadas
-$caminho = "B:\00 - CERTIFICADOS\"
-$path = "B:\00 - CERTIFICADOS\"
+$caminho = "B:\"
+$path = "B:\"
 
 
 # FAZ A VARREDURA E SALVA O DIRETÓRIO
