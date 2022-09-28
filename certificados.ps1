@@ -3,7 +3,7 @@
 net use B: /delete 
 #Coloque abaixo o diretorio onde estão os certificados
 net use B: "\\SERVIDOR\CERTIFICADO DIGITAL A1"
-#abaixo, aqui na empresa tinha pastas variadas
+
 $caminho = "B:\"
 $path = "B:\"
 
@@ -47,6 +47,7 @@ function InstalarCertificado($diretorio){
     $certRootStore = “CurrentUser”
     
      try {
+        #se tiver senha padrão, substitua o 12345678 pela sua senha padrão
         $pfxPass = ConvertTo-SecureString -String "12345678" -AsPlainText -Force
         $pfx = new-object System.Security.Cryptography.X509Certificates.X509Certificate2 
         $pfx.import($certPath,$pfxPass,"PersistKeySet") 
